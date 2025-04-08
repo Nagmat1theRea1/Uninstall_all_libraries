@@ -19,6 +19,8 @@ for i in range(len(pwsSeparte)-1):
         for j in range(len(pwsSeparte[i])):
             if pwsSeparte[i][j] != " ":
                 delete = delete + pwsSeparte[i][j]
+            elif delete == "pip":
+                break
             else:
                 subprocess.run(
                     ["powershell", "-Command", command[1]+" "+ delete + " --y"],
